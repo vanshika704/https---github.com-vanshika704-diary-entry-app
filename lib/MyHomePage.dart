@@ -35,12 +35,18 @@ class _MyHomePageState extends State<MyHomePage> {
                         height: 50,
                         width: size.width * 0.7,
                         decoration: BoxDecoration(
-                          color: Colors.white,
+                          color: Color.fromARGB(255, 253, 227, 109),
                           borderRadius:
                               const BorderRadius.all(Radius.circular(10)),
                         ),
                         child: const Center(
-                          child: Text('Daily diary entery'),
+                          child: Text(
+                            'Daily diary entery',
+                            style: TextStyle(
+                              fontStyle: FontStyle.italic,
+                              fontSize: 20.0,
+                            ),
+                          ),
                         )))
               ]))),
     );
