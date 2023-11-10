@@ -21,7 +21,13 @@ class _WelcomeState extends State<Welcome> {
               fontSize: 20.0,
             ),
           )),
-      body: Padding(padding: EdgeInsets.symmetric(horizontal: height * 0.05)),
+     body:Center(child: Column(children: [
+       SizedBox(height: 100.0),
+       monday(),
+     ],
+
+     ),)
+      ,
     );
   }
 }
@@ -37,8 +43,8 @@ class _mondayState extends State<monday> {
   @override
   Widget build(BuildContext context) {
     return Container(
-        height: MediaQuery.of(context).size.height,
-        color: Color.fromARGB(255, 226, 238, 114),
+        height: 100,width: 250,
+        color: Color.fromARGB(255, 163, 167, 136),
         child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -48,10 +54,11 @@ class _mondayState extends State<monday> {
                 style: TextStyle(
                   color: Colors.black,
                   fontSize: 20.0,
+                  fontWeight: FontWeight.bold
                 ),
               ),
-              Image.asset('assets/diary.jpg'),
-              const SizedBox(height: 30),
+              
+              const SizedBox(height: 100),
               GestureDetector(onTap: () {
                 Navigator.pushReplacement(context,
                     MaterialPageRoute(builder: (context) => const Welcome()));
