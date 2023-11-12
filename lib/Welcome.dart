@@ -47,38 +47,38 @@ class _mondayState extends State<monday> {
   Widget build(BuildContext context) {
     return Container(
         height: 80,
-        width: 500,
-        margin: EdgeInsets.symmetric(vertical: 10.0),
+        width: 300,
+        margin: EdgeInsets.symmetric(horizontal: 10,vertical: 10),
         padding: EdgeInsets.all(10.0),
         decoration: BoxDecoration(
           color: const Color.fromARGB(255, 152, 214, 245),
         ),
         child: Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
-          SizedBox(height: 250),
+          
           Text(
             "MONDAY",
             style: TextStyle(
               color: Color.fromARGB(255, 10, 11, 12),
               fontStyle: FontStyle.italic,
               fontWeight: FontWeight.bold,
-              fontSize: 25.0,
+              fontSize: 20.0,
             ),
           ),
           IconButton(
               onPressed: () {},
               icon: const Icon(
                 Icons.read_more,
-                color: Colors.white,
-                size: 70,
-              )),
-          GestureDetector(
+                color: Color.fromARGB(255, 22, 72, 119),
+                size: 25,
+              )),const SizedBox(width: 100),
+              GestureDetector(
             onTap: () {
               Navigator.pushReplacement(context,
                   MaterialPageRoute(builder: (context) => const Monday()));
-              Border:
-              InputBorder.none;
+             
             },
           )
+          
         ]));
   }
 }
