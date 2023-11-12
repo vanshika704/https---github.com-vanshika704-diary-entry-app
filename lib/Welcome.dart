@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'Monday.dart';
+
 class Welcome extends StatefulWidget {
   const Welcome({super.key});
 
@@ -22,7 +24,7 @@ class _WelcomeState extends State<Welcome> {
             ),
           )),
      body:Center(child: Column(children: [
-       SizedBox(height: 100.0),
+      SizedBox(height:60.0),
        monday(),
      ],
 
@@ -43,26 +45,39 @@ class _mondayState extends State<monday> {
   @override
   Widget build(BuildContext context) {
     return Container(
-        height: 100,width: 250,
-        color: Color.fromARGB(255, 163, 167, 136),
-        child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Text(
-                'MONDAY',
-                style: TextStyle(
-                  color: Colors.black,
-                  fontSize: 20.0,
-                  fontWeight: FontWeight.bold
-                ),
-              ),
-              
-              const SizedBox(height: 100),
-              GestureDetector(onTap: () {
-                Navigator.pushReplacement(context,
-                    MaterialPageRoute(builder: (context) => const Welcome()));
-              }),
-            ]));
+      height: 80,width: 500,
+       margin: EdgeInsets.symmetric(vertical: 10.0),
+        padding: EdgeInsets.all(10.0),
+        decoration: BoxDecoration(
+      color: const Color.fromARGB(255, 152, 214, 245),
+      ),
+      child: 
+        Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+          
+         children :[SizedBox(height:100) ,Text( "MONDAY",style: TextStyle(color: Color.fromARGB(255, 10, 11, 12),
+                              fontStyle: FontStyle.italic,fontWeight: FontWeight.bold,
+                              fontSize: 30.0,),
+                              ),
+                           SizedBox(height: 60),  
+            IconButton(
+              onPressed: () {},
+              icon: const Icon(
+                Icons.read_more,
+                color: Colors.white,
+                size: 80,
+        )),
+        GestureDetector(
+           onTap: () {
+                      Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const Monday()));
+                    }, 
+        )
+            
+            ]            
+
+    ));
   }
 }
