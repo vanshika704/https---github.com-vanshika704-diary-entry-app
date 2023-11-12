@@ -23,13 +23,14 @@ class _WelcomeState extends State<Welcome> {
               fontSize: 20.0,
             ),
           )),
-     body:Center(child: Column(children: [
-      SizedBox(height:60.0),
-       monday(),
-     ],
-
-     ),)
-      ,
+      body: Center(
+        child: Column(
+          children: [
+            SizedBox(height: 60.0),
+            monday(),
+          ],
+        ),
+      ),
     );
   }
 }
@@ -45,39 +46,39 @@ class _mondayState extends State<monday> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 80,width: 500,
-       margin: EdgeInsets.symmetric(vertical: 10.0),
+        height: 80,
+        width: 500,
+        margin: EdgeInsets.symmetric(vertical: 10.0),
         padding: EdgeInsets.all(10.0),
         decoration: BoxDecoration(
-      color: const Color.fromARGB(255, 152, 214, 245),
-      ),
-      child: 
-        Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
-          
-         children :[SizedBox(height:100) ,Text( "MONDAY",style: TextStyle(color: Color.fromARGB(255, 10, 11, 12),
-                              fontStyle: FontStyle.italic,fontWeight: FontWeight.bold,
-                              fontSize: 30.0,),
-                              ),
-                           SizedBox(height: 60),  
-            IconButton(
+          color: const Color.fromARGB(255, 152, 214, 245),
+        ),
+        child: Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
+          SizedBox(height: 250),
+          Text(
+            "MONDAY",
+            style: TextStyle(
+              color: Color.fromARGB(255, 10, 11, 12),
+              fontStyle: FontStyle.italic,
+              fontWeight: FontWeight.bold,
+              fontSize: 25.0,
+            ),
+          ),
+          IconButton(
               onPressed: () {},
               icon: const Icon(
                 Icons.read_more,
                 color: Colors.white,
-                size: 80,
-        )),
-        GestureDetector(
-           onTap: () {
-                      Navigator.pushReplacement(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const Monday()));
-                    }, 
-        )
-            
-            ]            
-
-    ));
+                size: 70,
+              )),
+          GestureDetector(
+            onTap: () {
+              Navigator.pushReplacement(context,
+                  MaterialPageRoute(builder: (context) => const Monday()));
+              Border:
+              InputBorder.none;
+            },
+          )
+        ]));
   }
 }
