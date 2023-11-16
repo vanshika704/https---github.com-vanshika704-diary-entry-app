@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'Monday.dart';
 import 'Tuesday.dart';
 import 'Wednesday.dart';
+import 'thursday.dart';
 
 class Welcome extends StatefulWidget {
   const Welcome({super.key});
@@ -34,6 +35,8 @@ class _WelcomeState extends State<Welcome> {
             tuesday(),
             SizedBox(height: 10.0),
             Wednesday(),
+            SizedBox(height: 10.0),
+            thursday(),
           ],
         ),
       ),
@@ -189,6 +192,56 @@ class _WednesdayState extends State<Wednesday> {
         ]));
   }
 }
+class thursday extends StatefulWidget {
+  const thursday({super.key});
 
+  @override
+  State<thursday> createState() => _thursdayState();
+}
+
+class _thursdayState extends State<thursday> {
+  @override
+  Widget build(BuildContext context) {
+    return Container(height: 80,
+        width: 300,
+        margin: EdgeInsets.symmetric(horizontal: 10,vertical: 10),
+        padding: EdgeInsets.all(10.0),
+        decoration: BoxDecoration(
+          color: const Color.fromARGB(255, 152, 214, 245),
+        ),
+        child: Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
+          
+          Text(
+            "THURSDAY",
+            style: TextStyle(
+              color: Color.fromARGB(255, 10, 11, 12),
+              fontStyle: FontStyle.italic,
+              fontWeight: FontWeight.bold,
+              fontSize: 20.0,
+            ),
+          ),
+          IconButton(
+              onPressed: () {},
+              icon: const Icon(
+                Icons.read_more,
+                color: Color.fromARGB(255, 22, 72, 119),
+                size: 25,
+              )),
+              GestureDetector(
+            onTap: () {
+              Navigator.pushReplacement(context,
+                  MaterialPageRoute(builder: (context) =>
+                  
+                   const Thursday())
+                   );
+            },
+            child: Text("click me"),
+          )
+          
+        ]));
+  }
+}
+
+ 
     
   
