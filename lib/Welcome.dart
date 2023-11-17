@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'Friday.dart';
 import 'Monday.dart';
 import 'Tuesday.dart';
 import 'Wednesday.dart';
@@ -241,7 +242,56 @@ class _thursdayState extends State<thursday> {
         ]));
   }
 }
+class friday extends StatefulWidget {
+  const friday({super.key});
 
- 
+  @override
+  State<friday> createState() => _fridayState();
+}
+
+class _fridayState extends State<friday> {
+  @override
+  Widget build(BuildContext context) {
+    return Container(height: 80,
+        width: 300,
+        margin: EdgeInsets.symmetric(horizontal: 10,vertical: 10),
+        padding: EdgeInsets.all(10.0),
+        decoration: BoxDecoration(
+          color: const Color.fromARGB(255, 152, 214, 245),
+        ),
+        child: Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
+          
+          Text(
+            "FRIDAY",
+            style: TextStyle(
+              color: Color.fromARGB(255, 10, 11, 12),
+              fontStyle: FontStyle.italic,
+              fontWeight: FontWeight.bold,
+              fontSize: 20.0,
+            ),
+          ),
+          IconButton(
+              onPressed: () {},
+              icon: const Icon(
+                Icons.read_more,
+                color: Color.fromARGB(255, 22, 72, 119),
+                size: 25,
+              )),
+              GestureDetector(
+            onTap: () {
+              Navigator.pushReplacement(context,
+                  MaterialPageRoute(builder: (context) =>
+                  
+                   const Friday())
+                   );
+            },
+            child: Text("click me"),
+          )
+          
+        ]));
+
+    
+  }
+}
     
   
