@@ -4,6 +4,7 @@ import 'Friday.dart';
 import 'Monday.dart';
 import 'Tuesday.dart';
 import 'Wednesday.dart';
+import 'saturday.dart';
 import 'thursday.dart';
 
 class Welcome extends StatefulWidget {
@@ -38,6 +39,10 @@ class _WelcomeState extends State<Welcome> {
             Wednesday(),
             SizedBox(height: 10.0),
             thursday(),
+            SizedBox(height: 10.0),
+            friday(),
+            SizedBox(height: 10.0),
+            saturday(),
           ],
         ),
       ),
@@ -293,5 +298,56 @@ class _fridayState extends State<friday> {
     
   }
 }
+    class saturday extends StatefulWidget {
+  const saturday({super.key});
+
+  @override
+  State<saturday> createState() => _saturdayState();
+}
+
+class _saturdayState extends State<saturday> {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: 80,
+        width: 300,
+        margin: EdgeInsets.symmetric(horizontal: 10,vertical: 10),
+        padding: EdgeInsets.all(10.0),
+        decoration: BoxDecoration(
+          color: const Color.fromARGB(255, 152, 214, 245),
+        ),
+        child: Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
+          
+          Text(
+            "SATURDAY",
+            style: TextStyle(
+              color: Color.fromARGB(255, 10, 11, 12),
+              fontStyle: FontStyle.italic,
+              fontWeight: FontWeight.bold,
+              fontSize: 20.0,
+            ),
+          ),
+          IconButton(
+              onPressed: () {},
+              icon: const Icon(
+                Icons.read_more,
+                color: Color.fromARGB(255, 22, 72, 119),
+                size: 25,
+              )),
+              GestureDetector(
+            onTap: () {
+              Navigator.pushReplacement(context,
+                  MaterialPageRoute(builder: (context) =>
+                  
+                   const Saturday())
+                   );
+            },
+            child: Text("click me"),
+          )
+          
+        ]));
+
     
-  
+  }
+}
+ 

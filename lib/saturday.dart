@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
 
-class Thursday extends StatefulWidget {
-  const Thursday({super.key});
+class Saturday extends StatefulWidget {
+  const Saturday({super.key});
 
   @override
-  State<Thursday> createState() => _ThursdayState();
+  State<Saturday> createState() => _SaturdayState();
 }
 
-class _ThursdayState extends State<Thursday> {
+class _SaturdayState extends State<Saturday> {
   @override
   Widget build(BuildContext context) {
     return Container(
         decoration: const BoxDecoration(
           color: const Color.fromARGB(255, 152, 214, 245),
           image: DecorationImage(
-            image: AssetImage("assets/thursday.jpg"),
+            image: AssetImage("assets/saturday.jpg"),
             fit: BoxFit.cover,
           ),
         ),
@@ -26,7 +26,7 @@ class _ThursdayState extends State<Thursday> {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               Text(
-                " Diary Entry\n Recreational activity-\n 1:40pm- 3:00pm: school\n sport- rock climbing.\nI find this activity to be\n enjoyable I like rock-climbing. \nI enjoy this activity a\n it provides many\n exercise benefits such\n as improving \nmy co- ordination and \nphysical strength.\nRock-climbing with my friends\n is a big benefit;\n it is a lot more \nenjoyable as we have \ncompetitions to\n who can get to the top of the\n wall the quickest,\n it is a good laugh.",
+                "Dear diary \n On Saturday morning,\n I woke up with a stomach ache.\n I guess it was because I drank\n some sour tea before I slept.\n It increased my stomach acid\n. I took a pill to see if it\n helped but\n It didn't help much, and\n I got worse after a while.\n I then took one more pill\n and ate some congee.\n It seemed better but I\n still didn't feel\n very well. I then \nthought about whether I \nshould go to see a doctor or not.\n When I was thinking about\n it in my bed, I fell\n asleep. When I \nwoke up, I completely recovered. ",
                 style: TextStyle(
                   color: Color.fromARGB(255, 10, 11, 12),
                   fontStyle: FontStyle.italic,
