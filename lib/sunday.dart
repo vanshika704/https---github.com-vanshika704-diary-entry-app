@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 class Sunday extends StatefulWidget {
+  // sunday diary entry
   const Sunday({super.key});
 
   @override
@@ -11,7 +12,7 @@ class _SundayState extends State<Sunday> {
   @override
   Widget build(BuildContext context) {
     return Container(
-       decoration: const BoxDecoration(
+        decoration: const BoxDecoration(
           color: const Color.fromARGB(255, 152, 214, 245),
           image: DecorationImage(
             image: AssetImage("assets/sunday.jpg"),
@@ -37,5 +38,3 @@ class _SundayState extends State<Sunday> {
             ]));
   }
 }
-
-   
