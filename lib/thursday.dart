@@ -4,7 +4,7 @@ class Thursday extends StatefulWidget {
   const Thursday({super.key});
 
   @override
-  State<Thursday> createState() => _ThursdayState();
+  State<Thursday> createState() => _ThursdayState(); // thursday
 }
 
 class _ThursdayState extends State<Thursday> {
