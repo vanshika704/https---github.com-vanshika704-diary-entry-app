@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 class Monday extends StatefulWidget {
+  // monday
   const Monday({super.key});
 
   @override
@@ -16,7 +17,6 @@ class _MondayState extends State<Monday> {
           image: DecorationImage(
             image: AssetImage("assets/monday.jpg"),
             fit: BoxFit.cover,
-            
           ),
         ),
         height: 80,
