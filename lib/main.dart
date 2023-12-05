@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+// a simple app in which you can write your weekly diary entry
 import 'MyHomePage.dart';
 
 void main() {
