@@ -12,7 +12,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-    return Scaffold(
+    return Scaffold(//.
       body: Container(
           width: size.width,
           height: size.height,
