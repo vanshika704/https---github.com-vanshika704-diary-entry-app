@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:navigationapp/Welcome.dart';
 
 class Saturday extends StatefulWidget {
   //saturday
@@ -11,7 +12,21 @@ class Saturday extends StatefulWidget {
 class _SaturdayState extends State<Saturday> {
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return Container( child: Scaffold(
+            appBar: AppBar(backgroundColor: Colors.transparent, actions: [
+              IconButton(
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const Welcome()));
+                  },
+                  icon: const Icon(
+                    Icons.arrow_back,
+                    color: Colors.white,
+                  )),
+            ]),
+            body: Container(
         decoration: const BoxDecoration(
           color: const Color.fromARGB(255, 152, 214, 245),
           image: DecorationImage(
@@ -35,6 +50,6 @@ class _SaturdayState extends State<Saturday> {
                   fontSize: 15.0,
                 ),
               ),
-            ]));
+            ]))));
   }
 }
