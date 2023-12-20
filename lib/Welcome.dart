@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:navigationapp/MyHomePage.dart';
 
 import 'Friday.dart';
 import 'Monday.dart';
@@ -18,7 +19,7 @@ class Welcome extends StatefulWidget {
 class _WelcomeState extends State<Welcome> {
   @override
   Widget build(BuildContext context) {
-    final height = MediaQuery.of(context).size.height;
+   
     return Scaffold(
       appBar: AppBar(
           backgroundColor: Colors.blueGrey,
@@ -46,6 +47,9 @@ class _WelcomeState extends State<Welcome> {
             saturday(),
              SizedBox(height: 10.0),
             sunday(),
+            SizedBox(height: 10.0),
+            BackButtonWidget(),
+            
             
           ],
         ),
@@ -141,7 +145,7 @@ class _tuesdayState extends State<tuesday> {
               )),
               GestureDetector(
             onTap: () {
-              Navigator.pushReplacement(context,
+              Navigator.push(context,
                   MaterialPageRoute(builder: (context) =>
                   
                    const Tuesday())
@@ -239,7 +243,7 @@ class _thursdayState extends State<thursday> {
               )),
               GestureDetector(
             onTap: () {
-              Navigator.pushReplacement(context,
+              Navigator.push(context,
                   MaterialPageRoute(builder: (context) =>
                   
                    const Thursday())
@@ -288,7 +292,7 @@ class _fridayState extends State<friday> {
               )),
               GestureDetector(
             onTap: () {
-              Navigator.pushReplacement(context,
+              Navigator.push(context,
                   MaterialPageRoute(builder: (context) =>
                   
                    const Friday())
@@ -406,4 +410,28 @@ class _sundayState extends State<sunday> {
     
   }
 }
-   
+ 
+class BackButtonWidget extends StatefulWidget {
+  const BackButtonWidget({Key? key}) : super(key: key);
+
+  @override
+  State<BackButtonWidget> createState() => _BackState();
+}
+
+class _BackState extends State<BackButtonWidget> {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: IconButton(
+        onPressed: () {
+          Navigator.pop(context, MaterialPageRoute(builder: (context) =>
+                  
+                   const MyHomePage()));
+        },
+        icon: Icon(Icons.arrow_back),
+      ),
+    );
+  }
+}
+
+  
