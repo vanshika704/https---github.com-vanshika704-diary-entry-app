@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:navigationapp/Welcome.dart';
+
 
 class Tuesday extends StatefulWidget {
   //tuesday
@@ -17,10 +17,9 @@ class _TuesdayState extends State<Tuesday> {
             appBar: AppBar(backgroundColor: Colors.transparent, actions: [
               IconButton(
                   onPressed: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const Welcome()));
+                    Navigator.pop(
+                        context
+                       );
                   },
                   icon: const Icon(
                     Icons.arrow_back,
@@ -35,8 +34,8 @@ class _TuesdayState extends State<Tuesday> {
                     fit: BoxFit.cover,
                   ),
                 ),
-                height: 80,
-                width: 500,
+                height: 1000,
+                width: 1000,
                 margin: EdgeInsets.symmetric(vertical: 10.0),
                 padding: EdgeInsets.all(10.0),
                 child: const Row(

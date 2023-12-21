@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:navigationapp/Welcome.dart';
 
 class Monday extends StatefulWidget {
   // monday
@@ -15,9 +14,7 @@ class _MondayState extends State<Monday> {
     return Container(child: Scaffold(
        appBar: AppBar(backgroundColor: Colors.transparent, actions: [
             IconButton(
-                onPressed: () { Navigator.pop(context, MaterialPageRoute(builder: (context) =>
-                  
-                   const Welcome()));},
+                onPressed: () { Navigator.pop(context,);},
                 icon: const Icon(
                   Icons.arrow_back,
                   color: Colors.white,

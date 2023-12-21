@@ -46,8 +46,7 @@ class _WelcomeState extends State<Welcome> {
             saturday(),
              SizedBox(height: 10.0),
             sunday(),
-            SizedBox(height: 10.0),
-            BackButtonWidget(),
+            
             
             
           ],
@@ -242,7 +241,7 @@ class _thursdayState extends State<thursday> {
               )),
               GestureDetector(
             onTap: () {
-              Navigator.push(context,
+              Navigator.pushReplacement(context,
                   MaterialPageRoute(builder: (context) =>
                   
                    const Thursday())
@@ -291,7 +290,7 @@ class _fridayState extends State<friday> {
               )),
               GestureDetector(
             onTap: () {
-              Navigator.push(context,
+              Navigator.pushReplacement(context,
                   MaterialPageRoute(builder: (context) =>
                   
                    const Friday())

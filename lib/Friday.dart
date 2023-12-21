@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:navigationapp/Welcome.dart';
+
 
 class Friday extends StatefulWidget {
   const Friday({super.key});
@@ -17,8 +17,7 @@ class _FridayState extends State<Friday> {
                   onPressed: () {
                     Navigator.pop(
                         context,
-                        MaterialPageRoute(
-                            builder: (context) => const Welcome()));
+                       );
                   },
                   icon: const Icon(
                     Icons.arrow_back,
@@ -33,8 +32,8 @@ class _FridayState extends State<Friday> {
             fit: BoxFit.cover,
           ),
         ),
-        height: 80,
-        width: 500,
+        height: 1000,
+        width: 1000,
         margin: EdgeInsets.symmetric(vertical: 10.0),
         padding: EdgeInsets.all(10.0),
         child: const Row(
