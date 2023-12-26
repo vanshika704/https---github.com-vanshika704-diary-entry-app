@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:get/get.dart';
 import 'Friday.dart';
 import 'Monday.dart';
 import 'Tuesday.dart';
@@ -18,41 +18,39 @@ class Welcome extends StatefulWidget {
 class _WelcomeState extends State<Welcome> {
   @override
   Widget build(BuildContext context) {
-   
     return Scaffold(
-      appBar: AppBar(
-          backgroundColor: Colors.blueGrey,
-          title: const Text(
-            "DAILY DIARY ENTRIES",
-            style: TextStyle(
-              color: Colors.black,
-              fontSize: 20.0,
+        appBar: AppBar(
+            backgroundColor: Colors.blueGrey,
+            title: const Text(
+              "DAILY DIARY ENTRIES",
+              style: TextStyle(
+                color: Colors.black,
+                fontSize: 20.0,
+              ),
+            )),
+        body:Center( child:
+          SingleChildScrollView(
+            child: Column(
+              children: [
+                SizedBox(height: 10.0),
+                monday(),
+                SizedBox(height: 10.0),
+                tuesday(),
+                SizedBox(height: 10.0),
+                Wednesday(),
+                SizedBox(height: 10.0),
+                thursday(),
+                SizedBox(height: 10.0),
+                friday(),
+                SizedBox(height: 10.0),
+                saturday(),
+                SizedBox(height: 10.0),
+                sunday(),
+              ],
             ),
-          )),
-      body: SingleChildScrollView(
-        child: Column(
-          children: [
-            SizedBox(height: 10.0),
-            monday(),
-             SizedBox(height: 10.0),
-            tuesday(),
-            SizedBox(height: 10.0),
-            Wednesday(),
-            SizedBox(height: 10.0),
-            thursday(),
-            SizedBox(height: 10.0),
-            friday(),
-            SizedBox(height: 10.0),
-            saturday(),
-             SizedBox(height: 10.0),
-            sunday(),
-            
-            
-            
-          ],
-        ),
-      ),
-    );
+          ),
+         
+        ));
   }
 }
 
@@ -69,13 +67,12 @@ class _mondayState extends State<monday> {
     return Container(
         height: 80,
         width: 300,
-        margin: EdgeInsets.symmetric(horizontal: 10,vertical: 10),
+        margin: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
         padding: EdgeInsets.all(10.0),
         decoration: BoxDecoration(
           color: const Color.fromARGB(255, 152, 214, 245),
         ),
         child: Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
-          
           Text(
             "MONDAY",
             style: TextStyle(
@@ -92,20 +89,17 @@ class _mondayState extends State<monday> {
                 color: Color.fromARGB(255, 22, 72, 119),
                 size: 25,
               )),
-              GestureDetector(
+          GestureDetector(
             onTap: () {
-              Navigator.pushReplacement(context,
-                  MaterialPageRoute(builder: (context) =>
-                  
-                   const Monday())
-                   );
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => const Monday()));
             },
             child: Text("click me"),
           )
-          
         ]));
   }
 }
+
 class tuesday extends StatefulWidget {
   const tuesday({super.key});
 
@@ -116,15 +110,15 @@ class tuesday extends StatefulWidget {
 class _tuesdayState extends State<tuesday> {
   @override
   Widget build(BuildContext context) {
-    return Container( height: 80,
+    return Container(
+        height: 80,
         width: 300,
-        margin: EdgeInsets.symmetric(horizontal: 10,vertical: 10),
+        margin: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
         padding: EdgeInsets.all(10.0),
         decoration: BoxDecoration(
           color: const Color.fromARGB(255, 152, 214, 245),
         ),
         child: Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
-          
           Text(
             "TUESDAY",
             style: TextStyle(
@@ -141,20 +135,17 @@ class _tuesdayState extends State<tuesday> {
                 color: Color.fromARGB(255, 22, 72, 119),
                 size: 25,
               )),
-              GestureDetector(
+          GestureDetector(
             onTap: () {
               Navigator.push(context,
-                  MaterialPageRoute(builder: (context) =>
-                  
-                   const Tuesday())
-                   );
+                  MaterialPageRoute(builder: (context) => const Tuesday()));
             },
             child: Text("click me"),
           )
-          
         ]));
   }
 }
+
 class Wednesday extends StatefulWidget {
   const Wednesday({super.key});
 
@@ -165,15 +156,15 @@ class Wednesday extends StatefulWidget {
 class _WednesdayState extends State<Wednesday> {
   @override
   Widget build(BuildContext context) {
-    return Container(height: 80,
+    return Container(
+        height: 80,
         width: 300,
-        margin: EdgeInsets.symmetric(horizontal: 10,vertical: 10),
+        margin: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
         padding: EdgeInsets.all(10.0),
         decoration: BoxDecoration(
           color: const Color.fromARGB(255, 152, 214, 245),
         ),
         child: Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
-          
           Text(
             "WEDNESDAY",
             style: TextStyle(
@@ -190,20 +181,17 @@ class _WednesdayState extends State<Wednesday> {
                 color: Color.fromARGB(255, 22, 72, 119),
                 size: 25,
               )),
-              GestureDetector(
+          GestureDetector(
             onTap: () {
-              Navigator.pushReplacement(context,
-                  MaterialPageRoute(builder: (context) =>
-                  
-                   const wednesday())
-                   );
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => const wednesday()));
             },
             child: Text("click me"),
           )
-          
         ]));
   }
 }
+
 class thursday extends StatefulWidget {
   const thursday({super.key});
 
@@ -214,15 +202,15 @@ class thursday extends StatefulWidget {
 class _thursdayState extends State<thursday> {
   @override
   Widget build(BuildContext context) {
-    return Container(height: 80,
+    return Container(
+        height: 80,
         width: 300,
-        margin: EdgeInsets.symmetric(horizontal: 10,vertical: 10),
+        margin: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
         padding: EdgeInsets.all(10.0),
         decoration: BoxDecoration(
           color: const Color.fromARGB(255, 152, 214, 245),
         ),
         child: Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
-          
           Text(
             "THURSDAY",
             style: TextStyle(
@@ -239,20 +227,17 @@ class _thursdayState extends State<thursday> {
                 color: Color.fromARGB(255, 22, 72, 119),
                 size: 25,
               )),
-              GestureDetector(
+          GestureDetector(
             onTap: () {
-              Navigator.pushReplacement(context,
-                  MaterialPageRoute(builder: (context) =>
-                  
-                   const Thursday())
-                   );
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => const Thursday()));
             },
             child: Text("click me"),
           )
-          
         ]));
   }
 }
+
 class friday extends StatefulWidget {
   const friday({super.key});
 
@@ -263,15 +248,15 @@ class friday extends StatefulWidget {
 class _fridayState extends State<friday> {
   @override
   Widget build(BuildContext context) {
-    return Container(height: 80,
+    return Container(
+        height: 80,
         width: 300,
-        margin: EdgeInsets.symmetric(horizontal: 10,vertical: 10),
+        margin: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
         padding: EdgeInsets.all(10.0),
         decoration: BoxDecoration(
           color: const Color.fromARGB(255, 152, 214, 245),
         ),
         child: Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
-          
           Text(
             "FRIDAY",
             style: TextStyle(
@@ -288,23 +273,18 @@ class _fridayState extends State<friday> {
                 color: Color.fromARGB(255, 22, 72, 119),
                 size: 25,
               )),
-              GestureDetector(
+          GestureDetector(
             onTap: () {
-              Navigator.pushReplacement(context,
-                  MaterialPageRoute(builder: (context) =>
-                  
-                   const Friday())
-                   );
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => const Friday()));
             },
             child: Text("click me"),
           )
-          
         ]));
-
-    
   }
 }
-    class saturday extends StatefulWidget {
+
+class saturday extends StatefulWidget {
   const saturday({super.key});
 
   @override
@@ -315,15 +295,14 @@ class _saturdayState extends State<saturday> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 80,
+        height: 80,
         width: 300,
-        margin: EdgeInsets.symmetric(horizontal: 10,vertical: 10),
+        margin: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
         padding: EdgeInsets.all(10.0),
         decoration: BoxDecoration(
           color: const Color.fromARGB(255, 152, 214, 245),
         ),
         child: Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
-          
           Text(
             "SATURDAY",
             style: TextStyle(
@@ -340,23 +319,18 @@ class _saturdayState extends State<saturday> {
                 color: Color.fromARGB(255, 22, 72, 119),
                 size: 25,
               )),
-              GestureDetector(
+          GestureDetector(
             onTap: () {
-              Navigator.pushReplacement(context,
-                  MaterialPageRoute(builder: (context) =>
-                  
-                   const Saturday())
-                   );
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => const Saturday()));
             },
             child: Text("click me"),
           )
-          
         ]));
-
-    
   }
 }
- class sunday extends StatefulWidget {
+
+class sunday extends StatefulWidget {
   const sunday({super.key});
 
   @override
@@ -367,15 +341,14 @@ class _sundayState extends State<sunday> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 80,
+        height: 80,
         width: 300,
-        margin: EdgeInsets.symmetric(horizontal: 10,vertical: 10),
+        margin: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
         padding: EdgeInsets.all(10.0),
         decoration: BoxDecoration(
           color: const Color.fromARGB(255, 152, 214, 245),
         ),
         child: Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
-          
           Text(
             "SUNDAY",
             style: TextStyle(
@@ -392,20 +365,13 @@ class _sundayState extends State<sunday> {
                 color: Color.fromARGB(255, 22, 72, 119),
                 size: 25,
               )),
-              GestureDetector(
+          GestureDetector(
             onTap: () {
-              Navigator.pushReplacement(context,
-                  MaterialPageRoute(builder: (context) =>
-                  
-                   const Sunday())
-                   );
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => const Sunday()));
             },
             child: Text("click me"),
           )
-          
         ]));
-
-    
   }
 }
-   
