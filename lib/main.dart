@@ -5,7 +5,7 @@ import 'package:navigationapp/login.dart';
 
 
 void main() {
-  runApp(const MyApp());
+  runApp( MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
   
   @override
   Widget build(BuildContext context) {
-    return const GetMaterialApp(
+    return  GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Personal diary',
       home: Login(),

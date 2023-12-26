@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
+
 import 'Friday.dart';
 import 'Monday.dart';
 import 'Tuesday.dart';
