@@ -15,7 +15,7 @@ class _SignupState extends State<Signup> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color.fromARGB(255, 86, 88, 102),
+        backgroundColor: Color.fromARGB(255, 87, 88, 102),
         actions: [
           IconButton(
             onPressed: () {
